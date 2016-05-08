@@ -1,0 +1,13 @@
+<h1> Which tag would you like for your <%=@project.pattern_name %>?</h1>
+
+<% @tags.each do |tag| %>
+  <ul>
+    <li><%=tag.id%>: <%=tag.name%></li>
+  </ul>
+<% end %>
+
+ <p>Type the number of the tag you woud like</p>
+<form action="/taggings/new/projects/:id" method ="post">
+  <input type="text" name="id" placeholder="tag number">
+  <input type="submit">
+  </form>

@@ -1,0 +1,17 @@
+
+<h1> login to post your projects </h1>
+
+  <% if @errors %>
+    <ul>
+      <% @errors.each do |message| %>
+        <li> <%= message %> </li>
+      <% end %>
+    </ul>
+    <% end %>
+
+  <form action='/login' method="post">
+    <input class="input" type="text" name="knitter[username]" placeholder="username">
+    <input class="input" type="password" name="knitter[password]" placeholder="password"> <br>
+    <input class="begin_submit, input" id="submit" type="submit" value="login">
+  </form>
+</div>

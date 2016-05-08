@@ -1,0 +1,12 @@
+ <form method="post" action="/projects/<%= @project.id %>">
+
+    <input name="project[pattern_name]" type="text" value="<%= @project.try(:pattern_name) %>">
+
+    <input name="project[yarn]" type="text" value="<%= @project.try(:yarn) %>">
+
+    <input name="project[total_yardage]" type="text" value="<%= @project.try(:total_yardage) %>">
+
+    <input name="project[notes]" type="text" value="<%= @project.try(:notes) %>">
+
+    <input type="submit" value="Update Project" class="button">
+  </form>

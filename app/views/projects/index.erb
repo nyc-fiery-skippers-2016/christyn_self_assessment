@@ -1,0 +1,15 @@
+<h1>Welcome to Black Sheep!</h1>
+<h2>Check out all the projects you and your fellow knitters have been making</h2>
+
+<% @projects.each do |project| %>
+  <h3><%=project.pattern_name %> knit by <%=project.knitter.username%></h3>
+  <ul>
+    <li>Yarn: <%=project.yarn%></li>
+    <li>Total Yardage Knit: <%=project.total_yardage%> yards
+    <li>Notes About This Project: <%=project.notes %>
+      </ul>
+  <% project.tags.each do |tag| %>
+  <p> tags: <%= tag.name %> </p>
+
+  <% end %>
+  <% end %>
