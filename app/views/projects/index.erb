@@ -1,6 +1,11 @@
 <h1>Welcome to Black Sheep!</h1>
 <h2>Check out all the projects you and your fellow knitters have been making</h2>
 
+<!--
+  Stay consistent
+  Do you want to put spaces after <% or not. A general practice is a space.
+  Also Make sure the <% end %> matches up with the loop or if
+-->
 <% @projects.each do |project| %>
   <h3><%=project.pattern_name %> knit by <%=project.knitter.username%></h3>
   <ul>

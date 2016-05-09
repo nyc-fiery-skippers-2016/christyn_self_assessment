@@ -1,13 +1,9 @@
 <h1>sign up to post your projects</h1>
-
-  <form method="post" action="/knitters">
-    <input class="input" name="knitter[username]" type="text" placeholder="username">
-    <input class="input" name="knitter[password]" type="password" placeholder="password">
-    <input class="input" type="text" name="knitter[years_knitting]" placeholder="number of years knitting">
-    <input class="begin_submit, input" id="submit" type="submit" value="cast on" class="button">
-  </form>
-
-  <% if @errors %>
+<!--
+  Perhaps move errors to the top
+  Also is there a more generic place to put errors?
+-->
+<% if @errors %>
   <ul>
     <% @errors.each do |message| %>
       <li class="errors">
@@ -16,3 +12,9 @@
     <% end %>
   </ul>
 <% end %>
+<form method="post" action="/knitters">
+  <input class="input" name="knitter[username]" type="text" placeholder="username">
+  <input class="input" name="knitter[password]" type="password" placeholder="password">
+  <input class="input" type="text" name="knitter[years_knitting]" placeholder="number of years knitting">
+  <input class="begin_submit, input" id="submit" type="submit" value="cast on" class="button">
+</form>

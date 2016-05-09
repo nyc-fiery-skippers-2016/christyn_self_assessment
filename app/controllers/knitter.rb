@@ -3,6 +3,7 @@ get '/knitters/new' do
 end
 
 post '/knitters' do
+  # Nice job using new and error checking
   knitter = Knitter.new(params[:knitter])
   if knitter.save
     session[:knitter_id] = knitter.id
